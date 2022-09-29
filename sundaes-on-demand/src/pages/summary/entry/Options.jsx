@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Row from 'react-bootstrap/Row'
 import ScoopOption from './ScoopOption'
 import ToppingOption from './ToppingOption'
-// import AlertBanner from '../common/AlertBanner'
+import AlertBanner from '../../common/AlertBanner'
 // import { pricePerItem } from '../../constants'
 // import { useOrderDetails } from '../../contexts/OrderDetails'
 // import { formatCurrency } from '../../utilities'
@@ -22,8 +22,7 @@ export default function Options({ optionType }) {
   }, [optionType])
 
   if (error) {
-    // return <AlertBanner />
-    return <div>error</div>
+    return <AlertBanner />
   }
 
   const ItemComponent = optionType === 'scoops' ? ScoopOption : ToppingOption
