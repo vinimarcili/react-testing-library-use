@@ -16,7 +16,7 @@ export default function ScoopOptions({ name, imagePath, updateItemCount }) {
     setIsValid(valueIsValid)
 
     // only update context if the value is valid
-    if (valueIsValid && updateItemCount) updateItemCount(name, currentValue)
+    if (valueIsValid) updateItemCount(name, currentValue)
   }
 
   return (

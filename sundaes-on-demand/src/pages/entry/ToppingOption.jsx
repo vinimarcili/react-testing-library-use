@@ -9,7 +9,7 @@ export default function ToppingOption({ name, imagePath, updateItemCount }) {
         <Form.Check
           type="checkbox"
           onChange={(e) => {
-            if (updateItemCount) updateItemCount(name, e.target.checked ? 1 : 0)
+            updateItemCount(name, e.target.checked ? 1 : 0)
           }}
           label={name}
         />
